@@ -1,2 +1,3 @@
 gradio>=5.7.1
+pydantic==2.10.6
 regex>=2022.1.18
