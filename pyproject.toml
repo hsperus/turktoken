@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "turktoken"
 version = "0.1.0"
-description = "urkish-optimized BPE tokenizer with GPT-4 style pre-tokenization. Train, encode, decode with custom special tokens."
+description = "Turkish-optimized BPE tokenizer with GPT-4 style pre-tokenization. Train, encode, decode with custom special tokens."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"

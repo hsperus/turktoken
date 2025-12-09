@@ -34,5 +34,3 @@ htmlcov/
 merges.json
 special_tokens.json
 
-# Hugging Face Space
-hf_space/
