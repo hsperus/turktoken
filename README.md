@@ -9,14 +9,19 @@ pinned: false
 license: mit
 ---
 
+<div align="center">
+
 # TurkToken
 
+**Turkish-optimized Byte Pair Encoding (BPE) Tokenizer**
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/omertarikyilmaz/turktoken)
 [![PyPI version](https://badge.fury.io/py/turktoken.svg)](https://pypi.org/project/turktoken/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A Turkish-optimized Byte Pair Encoding (BPE) tokenizer with GPT-4 style pre-tokenization patterns.
+</div>
+
+---
 
 ## Installation
 
@@ -93,30 +98,6 @@ tokenizer.add_special_tokens([
 tokenizer.save("./my_tokenizer")
 ```
 
-Using special tokens during encoding:
-
-```python
-tokenizer = TurkishBPETokenizer()
-tokenizer.load("./my_tokenizer")
-
-# Special tokens are recognized during encoding
-ids = tokenizer.encode("<|bos|>Merhaba dünya!<|eos|>")
-text = tokenizer.decode(ids)
-```
-
-## API Reference
-
-### TurkishBPETokenizer
-
-| Method | Description |
-|--------|-------------|
-| `train(text, vocab_size=512)` | Train the tokenizer on the given text corpus |
-| `encode(text)` | Convert text to a list of token IDs |
-| `decode(ids)` | Convert a list of token IDs back to text |
-| `add_special_tokens(tokens)` | Add a list of special tokens to the vocabulary |
-| `save(directory)` | Save the tokenizer to a directory |
-| `load(directory)` | Load a tokenizer from a directory |
-
 ## Features
 
 - Unicode-aware pre-tokenization optimized for Turkish text
@@ -129,7 +110,41 @@ text = tokenizer.decode(ids)
 
 - [PyPI Package](https://pypi.org/project/turktoken/)
 - [GitHub Repository](https://github.com/hsperus/turktoken)
+- [Try on Hugging Face](https://huggingface.co/spaces/omertarikyilmaz/turktoken)
 
-## License
+---
 
-MIT
+<div align="center">
+
+## Quick Example
+
+</div>
+
+```python
+from turktoken import TurkishBPETokenizer
+
+# Initialize and train
+tokenizer = TurkishBPETokenizer()
+tokenizer.train("Türkiye'nin başkenti Ankara'dır. İstanbul en büyük şehirdir.", vocab_size=512)
+
+# Encode
+ids = tokenizer.encode("Merhaba Türkiye!")
+print(f"Token IDs: {ids}")
+
+# Decode
+text = tokenizer.decode(ids)
+print(f"Decoded: {text}")
+
+# Add special tokens
+tokenizer.add_special_tokens(["<|bos|>", "<|eos|>"])
+
+# Save & Load
+tokenizer.save("./my_tokenizer")
+tokenizer.load("./my_tokenizer")
+```
+
+---
+
+<p align="center">
+  <b>License:</b> MIT
+</p>
