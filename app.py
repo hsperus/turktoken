@@ -186,7 +186,7 @@ Bu tokenizer, Türkçe metinleri verimli şekilde işlemek için tasarlanmışt�
 """
 
 # Build the interface
-with gr.Blocks(css=custom_css, title="TurkToken - Turkish BPE Tokenizer") as demo:
+with gr.Blocks(head=f"<style>{custom_css}</style>", title="TurkToken - Turkish BPE Tokenizer") as demo:
     gr.HTML("""
         <h1 class="main-header">TurkToken</h1>
         <p class="sub-header">Turkish-optimized Byte Pair Encoding (BPE) Tokenizer</p>
