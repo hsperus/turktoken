@@ -21,8 +21,8 @@ def train_tokenizer(text, vocab_size):
         vocab_count = len(tokenizer.vocab)
         merge_count = len(tokenizer.merges)
         
-        sample_tokens = list(tokenizer.vocab.items())[:20]
-        sample_display = "\n".join([f"ID {k}: {repr(v.decode('utf-8', errors='replace'))}" for k, v in sample_tokens if k >= 256])
+        sample_tokens = [(k, v) for k, v in tokenizer.vocab.items() if k >= 256][:20]
+        sample_display = "\n".join([f"ID {k}: {repr(v.decode('utf-8', errors='replace'))}" for k, v in sample_tokens])
         
         stats = f"""Tokenizer trained successfully!
 

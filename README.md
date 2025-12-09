@@ -1,6 +1,5 @@
 ---
 title: TurkToken
-emoji: 🔤
 colorFrom: indigo
 colorTo: blue
 sdk: gradio
