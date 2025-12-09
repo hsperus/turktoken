@@ -1,5 +1,8 @@
 # TurkToken
 
+[![PyPI version](https://badge.fury.io/py/turktoken.svg)](https://pypi.org/project/turktoken/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A Turkish-optimized Byte Pair Encoding (BPE) tokenizer with GPT-4 style pre-tokenization patterns.
 
 ## Installation
@@ -108,6 +111,11 @@ text = tokenizer.decode(ids)
 - Support for custom special tokens
 - Save and load trained tokenizers
 - Minimal dependencies (only `regex`)
+
+## Links
+
+- [PyPI Package](https://pypi.org/project/turktoken/)
+- [GitHub Repository](https://github.com/hsperus/turktoken)
 
 ## License
 
