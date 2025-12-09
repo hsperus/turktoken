@@ -1,5 +1,7 @@
 # TurkToken
 
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/omertarikyilmaz/turktoken)
 [![PyPI version](https://badge.fury.io/py/turktoken.svg)](https://pypi.org/project/turktoken/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
