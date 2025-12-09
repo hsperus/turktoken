@@ -137,6 +137,18 @@ class TurkishBPETokenizer:
 
         with open(os.path.join(directory, "special_tokens.json"), "w", encoding="utf-8") as f:
             json.dump(self.special_tokens, f, ensure_ascii=False, indent=2)
+        
+        # Export complete vocabulary (including base 256 bytes)
+        vocab_export = {}
+        for idx, token_bytes in self.vocab.items():
+            try:
+                token_str = token_bytes.decode("utf-8")
+            except:
+                token_str = repr(token_bytes)
+            vocab_export[str(idx)] = token_str
+        
+        with open(os.path.join(directory, "vocab.json"), "w", encoding="utf-8") as f:
+            json.dump(vocab_export, f, ensure_ascii=False, indent=2)
 
     def load(self, directory):
         merges_path = os.path.join(directory, "merges.json")
